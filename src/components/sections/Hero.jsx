@@ -75,10 +75,10 @@ function Hero() {
   };
 
   return (
-    <div className="flex flex-col min-h-[90vh] lg:flex-row py-8">
+    <div className="flex flex-col min-h-[85vh] lg:flex-row pt-8">
       <div className="lg:px-16 lg:relative lg:w-1/2 lg:flex lg:flex-col">
-        <div className="flex flex-col gap-3 mb-4">
-          <p className="text-xl lg:text-3xl">✈️ Explore the World ━━</p>
+        <div className="flex flex-col gap-3 my-4">
+          <p className="text-xl lg:text-2xl">✈️ Explore the World ━━</p>
           <p className="text-3xl lg:text-4xl font-bold">Discover The</p>
           <p className="text-3xl lg:text-4xl font-medium">Best Destinations</p>
           <p className="text-3xl lg:text-4xl font-medium mb-4">
@@ -89,7 +89,7 @@ function Hero() {
             beautiful place and a cheap trip with your beloved family.
           </p>
 
-          <div className="lg:absolute lg:bottom-10 lg:w-[40rem] bg-white w-full rounded-lg shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
+          <div className="lg:absolute lg:bottom-20 lg:z-10 lg:w-[40rem] bg-white w-full rounded-lg shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
             <div className="flex flex-col lg:flex-row lg:justify-around gap-5 p-4">
               <div className="location flex gap-4  lg:items-center">
                 <div className="bg-customBlue-3/20 p-2 rounded-full inline-block">

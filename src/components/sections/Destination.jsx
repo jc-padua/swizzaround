@@ -58,20 +58,20 @@ function Destination() {
 
   return (
     <div className="my-12">
-      <div className="bg-slate-500/5 rounded-xl p-4 my-16 relative">
-        <div className="flex flex-col gap-3 mb-4">
-          <p className="text-xl lg:text-3xl">Top Destination ━━</p>
-          <p className="text-3xl lg:text-7xl ">
+      <div className="bg-slate-500/10 rounded-xl p-8 my-16 relative ">
+        <div className="flex flex-col gap-3 mb-4 text-center">
+          <p className="text-xl lg:text-2xl">Top Destination ━━</p>
+          <p className="text-3xl lg:text-4xl ">
             <span className="font-bold">Let's Explore</span> Your Dream
           </p>
-          <p className="text-3xl lg:text-7xl font-medium">Destination Here!</p>
-          <p className="text-sm lg:text-4xl text-slate-500 my-2">
+          <p className="text-3xl lg:text-4xl font-medium">Destination Here!</p>
+          <p className="text-sm lg:text-xl text-slate-500 my-2">
             We have recommended popular destinations every week so you don't
             have to worry about your dream destination with SwissAround.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-lg p-4 mt-8  shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col lg:flex-row lg:absolute lg:-bottom-12 gap-4 lg:gap-2 rounded-lg p-4 mt-8 bg-white  shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
           <div className="flex gap-4 items-center">
             <CiLocationOn
               size={30}
@@ -125,7 +125,7 @@ function Destination() {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-5 my-4">
+      <div className="grid grid-cols-12 gap-5 mt-20">
         {destinations.map(destination => (
           <div
             key={destination.key}
@@ -153,7 +153,7 @@ function Destination() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mt-4">
         <Button buttonLabel={'See More'} isFilled={true} />
       </div>
     </div>

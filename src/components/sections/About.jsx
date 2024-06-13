@@ -56,32 +56,34 @@ function About() {
 
   return (
     <div>
-      <div className="">
-        <div className="my-4">
-          <p className="text-xl lg:text-3xl">About ━━</p>
-          <p className="text-3xl lg:text-7xl font-bold">We Recommend</p>
-          <p className="text-3xl lg:text-7xl font-medium">
-            Beautiful Destinations
-          </p>
-          <p className="text-3xl lg:text-7xl font-medium mb-4">Every Month</p>
-          <p className="text-sm lg:text-4xl text-slate-500 mb-4">
-            Let's choose you dream destinations here we provide many
-            destionations and we offer the best destinations every week.
-          </p>
-        </div>
+      <div className="flex flex-col lg:flex-row-reverse">
+        <div className="flex flex-col  justify-center my-4 mx-8">
+          <div className="">
+            <p className="text-xl lg:text-2xl">About ━━</p>
+            <p className="text-3xl lg:text-4xl font-bold">We Recommend</p>
+            <p className="text-3xl lg:text-4xl font-medium">
+              Beautiful Destinations
+            </p>
+            <p className="text-3xl lg:text-4xl font-medium mb-4">Every Month</p>
+            <p className="text-sm lg:text-xl text-slate-500 mb-4">
+              Let's choose you dream destinations here we provide many
+              destionations and we offer the best destinations every week.
+            </p>
+          </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-col bg-gray-600/5 items-center px-6 py-4 rounded-lg">
-            <p className="font-semibold">2000+</p>
-            <p className="text-sm text-gray-500">Our Explorers</p>
-          </div>
-          <div className="flex flex-col bg-gray-600/5 items-center px-6 py-4 rounded-lg">
-            <p className="font-semibold">100+</p>
-            <p className="text-sm text-gray-500">Destinations</p>
-          </div>
-          <div className="flex flex-col bg-gray-600/5 items-center px-6 py-4 rounded-lg">
-            <p className="font-semibold">20+</p>
-            <p className="text-sm text-gray-500">Years Experience</p>
+          <div className="flex flex-col gap-4 p-2 lg:flex-row lg:items-center justify-center">
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+              <p className="font-semibold">2000+</p>
+              <p className="text-xs text-gray-500">Our Explorers</p>
+            </div>
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+              <p className="font-semibold">100+</p>
+              <p className="text-xs text-gray-500">Destinations</p>
+            </div>
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+              <p className="font-semibold">20+</p>
+              <p className="text-xs text-gray-500">Years Experience</p>
+            </div>
           </div>
         </div>
 
@@ -89,49 +91,50 @@ function About() {
           //TODO: Picture layout in Desktop view
           Carousel
         }
-
-        <div className="my-12">
+      </div>
+      <div className="flex flex-col lg:flex-row">
+        <div className="my-12 lg:w-1/2">
           <p className="text-lg lg:text-3xl mb-2">What We Give ━━</p>
-          <p className="text-3xl lg:text-7xl font-bold">Best Features</p>
-          <p className="text-3xl lg:text-7xl font-medium mb-4">For You</p>
-          <p className="text-sm lg:text-4xl text-slate-500 mb-4">
+          <p className="text-3xl lg:text-4xl font-bold">Best Features</p>
+          <p className="text-3xl lg:text-4xl font-medium mb-4">For You</p>
+          <p className="text-sm lg:text-lg text-slate-500 mb-4">
             We will provide the best features for those of you who want to
             travel comfortably with your family.
           </p>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <div className="p-4 rounded-lg bg-gray-600/5">
+        <div className="flex flex-col lg:w-2/3 lg:flex-row lg:items-center lg:justify-center gap-4 lg:px-12">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
             <FaMapSigns
               size={40}
               color="#003f67"
               className="bg-[#003f67]/10 rounded-lg p-2 mb-1"
             />
-            <p className="font-semibold mb-2">Lots of Choices</p>
+            <p className="font-semibold text-sm mb-2">Lots of Choices</p>
             <p className="text-xs text-gray-500">
               We have provided several choices of destinations and very cheap
               traveling packages
             </p>
           </div>
-          <div className="p-4 rounded-lg bg-gray-600/5">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
             <FaPersonWalkingLuggage
               size={40}
               color="#003f67"
               className="bg-[#003f67]/10 rounded-lg p-2 mb-1"
             />
-            <p className="font-semibold mb-2">Best Tour Guide</p>
+            <p className="font-semibold text-sm mb-2">Best Tour Guide</p>
             <p className="text-xs text-gray-500">
               We provide professional tour guide and provide people who
               understand the place.
             </p>
           </div>
-          <div className="p-4 rounded-lg bg-gray-600/5">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
             <MdOutlineFlightTakeoff
               size={40}
               color="#003f67"
               className="bg-[#003f67]/10 rounded-lg p-2 mb-1"
             />
-            <p className="font-semibold mb-2">Easy Booking</p>
+            <p className="font-semibold text-sm mb-2">Easy Booking</p>
             <p className="text-xs text-gray-500">
               We will also make it easier for users to book tickets or book the
               place you want.
