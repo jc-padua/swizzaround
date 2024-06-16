@@ -5,8 +5,54 @@ import photoCard2 from '../../assets/images/photoCard2.png';
 import photoCard3 from '../../assets/images/photoCard3.png';
 import { IoMdBookmark } from 'react-icons/io';
 import Button from '../common/Button';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import { useScreenSize } from '../../context/ScreenSizeContext';
 
 function Tours() {
+  const { screenSize } = useScreenSize();
+
+  const Carousel = (
+    <>
+      <Swiper
+        spaceBetween={40}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper rounded-2xl my-20 lg:w-1/2"
+      >
+        <SwiperSlide>
+          <img
+            className="rounded-2xl aspect-auto shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] "
+            src={photoCard1}
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl aspect-auto shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]"
+            src={photoCard2}
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="rounded-2xl aspect-auto shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]"
+            src={photoCard3}
+            alt=""
+          />
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
   return (
     <div className="p-4">
       <div className="flex flex-col gap-2">
@@ -33,23 +79,29 @@ function Tours() {
           </p>
           <p className="text-xl mt-3">⭐⭐⭐⭐⭐</p>
         </div>
-        {/* TODO: WHEN CLICK THE OTHER PHOTOCARD WILL BE SHOWN ABOVE */}
-        <div className=" lg:w-1/2  flex flex-col gap-4 items-center relative mt-12">
-          <div
-            className={`w-4/5 lg:absolute -top-36 bg-white border-2 p-2
+
+        {screenSize >= 1040 ? (
+          Carousel
+        ) : (
+          <div className=" lg:w-1/2  flex flex-col gap-4 items-center relative mt-12">
+            <div
+              className={`w-4/5 lg:absolute -top-36 bg-white border-2 p-2
             }`}
-          >
-            <img src={photoCard1} alt="" />
+            >
+              <img src={photoCard1} alt="" />
+            </div>
+            <div
+              className={`w-4/5 lg:absolute lg:-top-44 bg-white border-2 p-2 `}
+            >
+              <img src={photoCard2} alt="" />
+            </div>
+            <div
+              className={`w-4/5 lg:absolute lg:-top-48 bg-white border-2 p-2`}
+            >
+              <img src={photoCard3} alt="" />
+            </div>
           </div>
-          <div
-            className={`w-4/5 lg:absolute lg:-top-44 bg-white border-2 p-2 `}
-          >
-            <img src={photoCard2} alt="" />
-          </div>
-          <div className={`w-4/5 lg:absolute lg:-top-48 bg-white border-2 p-2`}>
-            <img src={photoCard3} alt="" />
-          </div>
-        </div>
+        )}
       </div>
 
       <div className="flex flex-col gap-4 text-center bg-customBlue-1/10 p-8 my-12 rounded-3xl">

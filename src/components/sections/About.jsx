@@ -55,9 +55,9 @@ function About() {
   const { screenSize } = useScreenSize();
 
   return (
-    <div>
+    <div className="">
       <div className="flex flex-col lg:flex-row-reverse">
-        <div className="flex flex-col  justify-center my-4 mx-8">
+        <div className="flex flex-col  justify-center my-4 mx-8 w-1/2">
           <div className="">
             <p className="text-xl lg:text-2xl">About ━━</p>
             <p className="text-3xl lg:text-4xl font-bold">We Recommend</p>
@@ -72,27 +72,46 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-4 p-2 lg:flex-row lg:items-center justify-center">
-            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg shadow-xl">
               <p className="font-semibold">2000+</p>
               <p className="text-xs text-gray-500">Our Explorers</p>
             </div>
-            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg shadow-xl">
               <p className="font-semibold">100+</p>
               <p className="text-xs text-gray-500">Destinations</p>
             </div>
-            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg">
+            <div className="flex flex-col bg-gray-600/5 lg:w-1/2 items-center px-6 py-4 rounded-lg shadow-xl">
               <p className="font-semibold">20+</p>
               <p className="text-xs text-gray-500">Years Experience</p>
             </div>
           </div>
         </div>
 
-        {
-          //TODO: Picture layout in Desktop view
+        {screenSize <= 1024 ? (
           Carousel
-        }
+        ) : (
+          <div className="flex flex-col gap-10 relative w-1/2">
+            <div className="flex justify-center">
+              <img
+                className="rounded-2xl border-2 border-white w-[30rem] -translate-x-10 -translate-y-5"
+                src={switzAbout1}
+                alt=""
+              />
+            </div>
+            <img
+              className="rounded-2xl border-2 border-white w-[17rem] absolute -bottom-5 right-20"
+              src={switzAbout2}
+              alt=""
+            />
+            <img
+              className="rounded-2xl border-2 border-white w-[15rem] absolute top-10 -right-5"
+              src={switzAbout3}
+              alt=""
+            />
+          </div>
+        )}
       </div>
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row xl:p-10 xl:my-10">
         <div className="my-12 lg:w-1/2">
           <p className="text-lg lg:text-3xl mb-2">What We Give ━━</p>
           <p className="text-3xl lg:text-4xl font-bold">Best Features</p>
@@ -103,8 +122,8 @@ function About() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:w-2/3 lg:flex-row lg:items-center lg:justify-center gap-4 lg:px-12">
-          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
+        <div className="flex flex-col lg:w-2/3 lg:flex-row lg:items-center lg:justify-center gap-4 xl:gap-10 lg:px-12">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44 xl:p-4">
             <FaMapSigns
               size={40}
               color="#003f67"
@@ -116,7 +135,7 @@ function About() {
               traveling packages
             </p>
           </div>
-          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44 xl:p-4">
             <FaPersonWalkingLuggage
               size={40}
               color="#003f67"
@@ -128,7 +147,7 @@ function About() {
               understand the place.
             </p>
           </div>
-          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44">
+          <div className="p-2 rounded-lg bg-gray-600/5 lg:h-44 xl:p-4">
             <MdOutlineFlightTakeoff
               size={40}
               color="#003f67"

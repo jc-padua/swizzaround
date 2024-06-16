@@ -36,21 +36,21 @@ function Header() {
 
       <div className={` ${isMenuShowing == true ? 'block' : 'hidden'} lg:flex`}>
         <ul
-          className={`flex flex-col gap-4 my-4 animate-fade-left lg:flex-row`}
+          className={`flex flex-col gap-12 my-4 animate-fade-left lg:flex-row`}
         >
-          <li className="text-xl hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
+          <li className="text-xl xl:text-lg hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
             <a href="">Home</a>
           </li>
-          <li className="text-xl hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
+          <li className="text-xl xl:text-lg hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
             <a href="">About</a>
           </li>
-          <li className="text-xl hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
+          <li className="text-xl xl:text-lg hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
             <a href="">Destinations</a>
           </li>
-          <li className="text-xl hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
+          <li className="text-xl xl:text-lg hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
             <a href="">Tours</a>
           </li>
-          <li className="text-xl hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
+          <li className="text-xl xl:text-lg hover:border-b-2 hover:border-b-blue-500 ease-linear duration-100">
             <a href="">Blog</a>
           </li>
         </ul>

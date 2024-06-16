@@ -57,8 +57,8 @@ function Destination() {
   ];
 
   return (
-    <div className="my-12">
-      <div className="bg-slate-500/10 rounded-xl p-8 my-16 relative ">
+    <div className="my-12 xl:my-6 flex flex-col ">
+      <div className="bg-slate-500/10 rounded-xl p-8 xl:p-2 my-16 xl:my-0 xl:mx-48 relative xl:flex xl:flex-col xl:justify-center">
         <div className="flex flex-col gap-3 mb-4 text-center">
           <p className="text-xl lg:text-2xl">Top Destination ━━</p>
           <p className="text-3xl lg:text-4xl ">
@@ -71,61 +71,62 @@ function Destination() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row lg:absolute lg:-bottom-12 gap-4 lg:gap-2 rounded-lg p-4 mt-8 bg-white  shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
-          <div className="flex gap-4 items-center">
-            <CiLocationOn
-              size={30}
-              color="#003f67"
-              className="bg-[#003f67]/10 rounded-full p-2 mb-1"
-            />
-            <div className="">
-              <p className="font-semibold">Location</p>
-              <p className="text-gray-500 text-sm">Where are you going?</p>
+        <div className="flex flex-col min-lg:flex-row min-lg:absolute min-lg:-bottom-12 gap-4 lg:gap-2 rounded-lg p-4 mt-8 bg-white  shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)]">
+          <div className="flex flex-col xl:flex-row gap-4 xl:items-center xl:justify-center ">
+            <div className="flex gap-4 items-center">
+              <CiLocationOn
+                size={30}
+                color="#003f67"
+                className="bg-[#003f67]/10 rounded-full p-2 mb-1"
+              />
+              <div className="">
+                <p className="font-semibold">Location</p>
+                <p className="text-gray-500 text-sm">Where are you going?</p>
+              </div>
             </div>
-          </div>
-          <hr />
-          <div className="flex gap-4 items-center">
-            <IoPeopleOutline
-              size={30}
-              color="#003f67"
-              className="bg-[#003f67]/10 rounded-full p-2 mb-1"
-            />
-            <div className="">
-              <p className="font-semibold">Person</p>
-              <p className="text-gray-500 text-sm">How many person?</p>
+            <hr />
+            <div className="flex gap-4 items-center">
+              <IoPeopleOutline
+                size={30}
+                color="#003f67"
+                className="bg-[#003f67]/10 rounded-full p-2 mb-1"
+              />
+              <div className="">
+                <p className="font-semibold">Person</p>
+                <p className="text-gray-500 text-sm">How many person?</p>
+              </div>
             </div>
-          </div>
-          <hr />
-          <div className="flex gap-4 items-center">
-            <RiCalendarCheckLine
-              size={30}
-              color="#003f67"
-              className="bg-[#003f67]/10 rounded-full p-2 mb-1"
-            />
-            <div className="">
-              <p className="font-semibold">Check In</p>
-              <p className="text-gray-500 text-sm">03 August 2024</p>
+            <hr />
+            <div className="flex gap-4 items-center">
+              <RiCalendarCheckLine
+                size={30}
+                color="#003f67"
+                className="bg-[#003f67]/10 rounded-full p-2 mb-1"
+              />
+              <div className="">
+                <p className="font-semibold">Check In</p>
+                <p className="text-gray-500 text-sm">03 August 2024</p>
+              </div>
             </div>
-          </div>
-          <hr />
-          <div className="flex gap-4 items-center">
-            <RiCalendarCloseFill
-              size={30}
-              color="#003f67"
-              className="bg-[#003f67]/10 rounded-full p-2 mb-1"
-            />
-            <div className="">
-              <p className="font-semibold">Check Out</p>
-              <p className="text-gray-500 text-sm">14 August 2024</p>
+            <hr />
+            <div className="flex gap-4 items-center">
+              <RiCalendarCloseFill
+                size={30}
+                color="#003f67"
+                className="bg-[#003f67]/10 rounded-full p-2 mb-1"
+              />
+              <div className="">
+                <p className="font-semibold">Check Out</p>
+                <p className="text-gray-500 text-sm">14 August 2024</p>
+              </div>
             </div>
+            <hr />
+            <Button buttonLabel={'Get Started'} isFilled={true} />
           </div>
-          <hr />
-
-          <Button buttonLabel={'Get Started'} isFilled={true} />
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-5 mt-20">
+      <div className="grid grid-cols-12 gap-5 mt-20 xl:mx-32">
         {destinations.map(destination => (
           <div
             key={destination.key}
